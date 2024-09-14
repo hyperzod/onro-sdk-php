@@ -83,10 +83,10 @@ class BaseOnroClient implements OnroClientInterface
       // Instantiate a Guzzle client
       $client = new Client();
 
-      $response = $client->post($this->getApiBase() . "auth/token", [
+      $response = $client->post($this->getApiBase() . "/auth/token", [
          'json' => [
-            'client_id' => $this->getClientID(),
-            'client_secret' => $this->getClientSecret()
+            'clientId' => $this->getClientID(),
+            'clientSecret' => $this->getClientSecret()
          ]
       ]);
 
@@ -95,8 +95,7 @@ class BaseOnroClient implements OnroClientInterface
 
       // Decode the JSON response
       $result = json_decode($responseBody, true);
-
-      return $result['data']['access_token'];
+      return $result['data']['accessToken'];
    }
 
 

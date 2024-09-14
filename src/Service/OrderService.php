@@ -30,6 +30,6 @@ class OrderService extends AbstractService
 
    public function get(array $params)
    {
-      return $this->request(HttpMethodEnum::GET, '/order/' . $params['order_id'] . '?customerId=' . $params['customerId'], $params);
+      return $this->request(HttpMethodEnum::GET, '/order/' . $params['orderId'] . '?customerId=' . $params['customerId'], $params);
    }
 }

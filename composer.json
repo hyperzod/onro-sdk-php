@@ -1,0 +1,42 @@
+{
+  "name": "hyperzod/onro-sdk-php",
+  "description": "A PHP SDK to integrate Onro with your application.",
+  "keywords": [
+    "hyperzod",
+    "onro-sdk-php"
+  ],
+  "homepage": "https://github.com/hyperzod/onro-sdk-php",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Mohd Farhan Rizwan",
+      "email": "farhanrizwan123@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "guzzlehttp/guzzle": "^7.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hyperzod\\OnroSdkPhp\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Hyperzod\\OnroSdkPhp\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
